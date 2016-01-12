@@ -1,5 +1,5 @@
 FROM ubuntu:15.10
-MAINTAINER Mobile Innovation Lab
+MAINTAINER Mobile Innovation Lab (IBM)
 
 LABEL Description="Image used to create a Linux environment with the Swift 2.2 compiler installed"
 
@@ -21,6 +21,7 @@ RUN apt-get install -y libtool
 RUN apt-get install -y clang
 RUN apt-get install -y curl
 RUN apt-get install -y libglib2.0-dev
+RUN apt-get install -y libblocksruntime-dev
 
 # Install Swift
 RUN wget https://swift.org/builds/ubuntu1510/swift-2.2-SNAPSHOT-2016-01-06-a/swift-2.2-SNAPSHOT-2016-01-06-a-ubuntu15.10.tar.gz
