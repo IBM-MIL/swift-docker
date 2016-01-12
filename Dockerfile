@@ -28,11 +28,6 @@ RUN tar xzvf swift-2.2-SNAPSHOT-2016-01-06-a-ubuntu15.10.tar.gz
 ENV PATH /swift-2.2-SNAPSHOT-2016-01-06-a-ubuntu15.10/usr/bin:$PATH
 RUN swiftc -h
 
-#Install pkg-config
-RUN curl http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.tar.gz -o pkgconfig.tgz
-RUN tar -zxf pkgconfig.tgz
-RUN cd pkg-config-0.29 && ./configure && make install
-
 # Clone and install libdispatch
 RUN git clone https://github.com/apple/swift-corelibs-libdispatch.git
 RUN cd swift-corelibs-libdispatch && sh ./autogen.sh && ./configure && make && make install
