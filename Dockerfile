@@ -35,4 +35,4 @@ RUN cd pkg-config-0.29 && ./configure && make install
 
 # Clone and install libdispatch
 RUN git clone https://github.com/apple/swift-corelibs-libdispatch.git
-#RUN `cd swift-corelibs-libdispatch && sh ./autogen.sh && ./configure && make && make install`
+RUN cd swift-corelibs-libdispatch && sh ./autogen.sh && ./configure && make && make install
