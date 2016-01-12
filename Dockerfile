@@ -13,7 +13,6 @@ RUN apt-get install -y g++-4.8
 RUN apt-get install -y libcurl3
 RUN apt-get install -y libkqueue-dev
 RUN apt-get install -y openssh-server
-RUN apt-get install -y libkqueue-dev
 RUN apt-get install -y automake
 RUN apt-get install -y libbsd-dev
 RUN apt-get install -y git
@@ -28,5 +27,5 @@ ENV PATH /swift-2.2-SNAPSHOT-2016-01-06-a-ubuntu15.10/usr/bin:$PATH
 RUN swiftc -h
 
 # Clone and install libdispatch
-RUN git clone -b opaque-pointer git://github.com/seabaylea/swift-corelibs-libdispatch
+RUN git clone https://github.com/apple/swift-corelibs-libdispatch.git
 RUN `cd swift-corelibs-libdispatch && sh ./autogen.sh && ./configure && make && make install`
