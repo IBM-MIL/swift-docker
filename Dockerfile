@@ -31,7 +31,7 @@ RUN swiftc -h
 #Install pkg-config
 RUN curl http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.tar.gz -o pkgconfig.tgz
 RUN tar -zxf pkgconfig.tgz
-#RUN `cd pkg-config-0.29 && ./configure && make install`
+RUN cd pkg-config-0.29 && ./configure && make install
 
 # Clone and install libdispatch
 RUN git clone https://github.com/apple/swift-corelibs-libdispatch.git
