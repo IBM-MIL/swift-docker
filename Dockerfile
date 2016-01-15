@@ -39,3 +39,6 @@ RUN swiftc -h
 #RUN git clone https://github.com/apple/swift-corelibs-libdispatch.git
 RUN git clone -b opaque-pointer git://github.com/seabaylea/swift-corelibs-libdispatch
 RUN cd swift-corelibs-libdispatch && sh ./autogen.sh && ./configure && make && make install
+
+# Add module map for libdispatch
+# git clone git@github.ibm.com:ibmswift/IncludeChanges.git
